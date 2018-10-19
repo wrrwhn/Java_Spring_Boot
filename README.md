@@ -10,6 +10,9 @@
 - 种子项目
 	- 平时使用的基础项目结构    
 
+## Module
+- Security*
+    - 验证+ 授权
 
 
 # TODO
@@ -23,10 +26,6 @@
 ## 官方
 - [Spring Boot Reference Guide](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)    
 - [Spring Boot application starters](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-starter)    
-- []() 
-- []() 
 
 ## 参考
 - [Spring Boot快速开始指南](https://jimmysong.io/posts/spring-boot-quick-start-guide/)    
-- []()    
-- []()    

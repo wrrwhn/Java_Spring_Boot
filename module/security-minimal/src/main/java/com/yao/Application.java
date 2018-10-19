@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Creator: Yao
- * Date:    2018/9/30
+ * Date:    2018/9/28
  * For:
  * Other:
  */
@@ -16,4 +16,3 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 }
-
