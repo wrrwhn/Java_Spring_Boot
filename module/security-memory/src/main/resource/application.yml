@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: security-h2
+  datasource:
+    url: jdbc:h2:mem:h2test;DB_CLOSE_DELAY=-1
+    platform: h2
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    schema: classpath:h2/schema.sql
+    data: classpath:h2/data.sql
+  h2:
+    console:
+      settings:
+        web-allow-others: true
+      path: /h2-console
+      enabled: true
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    # 无法正常请求数据时添加该行
+    hibernate:
+      ddl-auto: update
