@@ -1,0 +1,2 @@
+create table users(id bigint auto_increment, username varchar(255), password varchar(255), enabled boolean);
+create table authorities(id bigint auto_increment, username  varchar(255),authority varchar(255), UNIQUE(username,authority));

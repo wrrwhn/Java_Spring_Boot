@@ -1,9 +1,12 @@
 server:
   port: 8080
+#  servlet:
+#    session:
+#      timeout: 2m
 
 spring:
   application:
-    name: security-memory
+    name: security-session
   datasource:
     url: jdbc:h2:mem:h2test;DB_CLOSE_DELAY=-1
     platform: h2
@@ -22,6 +25,14 @@ spring:
     database: h2
     database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
-    # 无法正常请求数据时添加该行
     hibernate:
       ddl-auto: update
+
+  # 以 Redis 形式存储 session
+  session:
+#    timeout: 2m
+    store-type: redis
+  redis:
+    host: 106.14.172.103
+
+
