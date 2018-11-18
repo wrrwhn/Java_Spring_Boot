@@ -13,15 +13,18 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class SecurityMvcConfig implements WebMvcConfigurer {
 
-    public final static String SESSION_KEY = "key";
+    public final static String SESSION_KEY = "USER_SESSION";
 
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+
         registry
                 .addInterceptor(new SecurityInterceptor())
-                .excludePathPatterns("/user/login", "/user/logout")
                 .addPathPatterns("/**")
-        ;
+                .excludePathPatterns(
+                        "/user/login", "/user/logout",
+                        "/redis/**"
+                );
     }
 }
