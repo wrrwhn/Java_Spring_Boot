@@ -30,9 +30,6 @@ public class UserController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public void login(String username, String password, HttpSession session) {
 
-        Assert.isTrue(StringUtils.isNotBlank(username), "");
-        Assert.isTrue(StringUtils.isNotBlank(password), "");
-
         session.setAttribute(SecurityMvcConfig.SESSION_KEY, 1);
     }
 
