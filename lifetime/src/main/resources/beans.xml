@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="beanPostProcessor" class="com.yao.logic.LogicBeanPostProcessor"></bean>
+    <bean id="instantiationAwareBeanPostProcessor"
+          class="com.yao.logic.LogicInstantiationAwareBeanPostProcessorAdapter">
+    </bean>
+    <bean id="beanFactoryPostProcessor" class="com.yao.logic.LogicBeanFactoryPostProcessor">
+    </bean>
+    <bean id="logicBean" class="com.yao.logic.service.LogicBean" init-method="initMethod"
+          destroy-method="destroyMethod" scope="singleton" p:desc="Desc from beans.xml"/>
+    <bean id="logicFactoryBean" class="com.yao.logic.service.LogicFactoryBean"/>
+
+</beans>
